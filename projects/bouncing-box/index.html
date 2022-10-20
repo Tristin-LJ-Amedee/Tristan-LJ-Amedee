@@ -102,10 +102,24 @@
 			function handleBoxClick() {
 				var randNum = Math.floor(Math.random() * boardWidth);
 				var randNum2 = Math.floor(Math.random() * boardHeight);
+				var randNum3 = Math.floor(Math.random() * 4)
+				if (randNum3 = 1){
+					speed = -speed
+				}
+				else if (randNum3 = 2){
+					speedY = -speedY
+				}
+				else if (randNum3 = 3){
+					speed = speed
+					speedY = speedY
+				}
+				else if (randNum3 = 4){
+					speed = -speed
+					speedY = -speedY
+				}
 				positionX = randNum
 				positionY = randNum2
-				
-				positionX = 0
+
 				points = points + 1
 				changeBoxText(points)
 				speed = speed + 3
